@@ -1,0 +1,27 @@
+dependencies: \
+  /Users/tom/Documents/Programming/openFrameworks/of_v0.8.4_ios_release/addons/ofxQCAR/src/ofxQCAR_Utils.mm \
+  /Users/tom/Documents/Programming/openFrameworks/of_v0.8.4_ios_release/addons/ofxQCAR/src/ofxQCAR_Utils.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Tool.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/System.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Matrices.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Vectors.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/DataSet.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/NonCopyable.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/ImageTarget.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Trackable.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Type.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/CameraDevice.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/VideoMode.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/CameraCalibration.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/TrackableResult.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/VideoBackgroundConfig.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/QCAR.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/QCAR_iOS.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Renderer.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/State.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Frame.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Tracker.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/TrackerManager.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/ImageTracker.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/MultiTarget.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/MarkerTracker.h
