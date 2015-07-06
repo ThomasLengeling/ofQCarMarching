@@ -1,11 +1,32 @@
 varying vec3 norm;
-varying vec3 ePos;
+varying vec3 pos;
+
+uniform mat4 modelViewProjectionMatrix;
+uniform mat4 modelViewMatrix;
+uniform mat4 normalMatrix;
+
+uniform mat4 mv;
+uniform mat4 mp;
+
+attribute vec4 position;
+attribute vec4 normal;
+
 void main()
 {
-	norm = normalize(gl_NormalMatrix * gl_Normal);
-	norm = norm * .5 + .5;
-	
-	vec4 ecPosition = gl_ModelViewMatrix * gl_Vertex;
-	gl_Position = gl_ProjectionMatrix * ecPosition;
-}
+//	mat3 normalMatrix = transpose(inverse(modelViewMatrix));
 
+//	norm = normalize(WorldViewInverseTranspose * normal).xyz;
+//	norm = norm * .5 + .5;
+
+	//gl_Position = projectionMatrix * modelViewMatrix * position;
+
+	//mat3 m3 = transpose(inverse(mat3(modelViewMatrix)));
+	//norm = normalize(m3 * normal);
+
+	 norm =  (normalMatrix * vec4(normal.xyz,0.0)).xyz;
+
+	 vec4 vertPos  =   mv * vec4(position.xyz, 1.0);
+     pos = vec3(vertPos.xyz) / vertPos.w;
+
+	 gl_Position = mv * mp * position;
+}

@@ -7,34 +7,34 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CA1DB6A8-357B-4DC3-A147-D7350616D1D3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ofxQCAR</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DD01261E167E52599E1223F132F62BBFC9F14B83</key>
-		<string>https://github.com/ThomasLengeling/QCarMarching.git</string>
+		<key>5F1A4E27BC04EC7A06D207800736EEC7DB008F60</key>
+		<string>https://github.com/ThomasLengeling/ofQCarMarching.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ofxQCAR.xcodeproj/project.xcworkspace</string>
+	<string>example/ofxQCAR.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DD01261E167E52599E1223F132F62BBFC9F14B83</key>
-		<string>../..</string>
+		<key>5F1A4E27BC04EC7A06D207800736EEC7DB008F60</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ThomasLengeling/QCarMarching.git</string>
+	<string>https://github.com/ThomasLengeling/ofQCarMarching.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DD01261E167E52599E1223F132F62BBFC9F14B83</string>
+	<string>5F1A4E27BC04EC7A06D207800736EEC7DB008F60</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DD01261E167E52599E1223F132F62BBFC9F14B83</string>
+			<string>5F1A4E27BC04EC7A06D207800736EEC7DB008F60</string>
 			<key>IDESourceControlWCCName</key>
-			<string>example</string>
+			<string>ofxQCAR</string>
 		</dict>
 	</array>
 </dict>

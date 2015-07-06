@@ -899,8 +899,15 @@ void ofxQCAR::draw() {
     //--- render the video background.
     
     State state = Renderer::getInstance().begin();
-    Renderer::getInstance().drawVideoBackground();
-    Renderer::getInstance().end();
+    if(Renderer::getInstance().drawVideoBackground()){
+         Renderer::getInstance().end();
+    }else{
+        ofPopView();
+        ofPopStyle();
+        ofDisableDepthTest();
+
+        return;
+    }
     
     cameraWidth = 0;
     cameraHeight = 0;

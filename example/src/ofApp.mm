@@ -9,8 +9,8 @@ void ofApp::setupMarchingCubes()
     differentSurfaces = 0;
     mc.setup();
     
-    mc.setResolution(8,8,8); //resolution
-    mc.scale.set( 20, 20, 20 ); //scalar
+    mc.setResolution(16, 16, 16); //resolution
+    mc.scale.set( 500, 500, 250 ); //scalar
     
     mc.setSmoothing( false );
     
@@ -72,12 +72,36 @@ void ofApp::drawMarchingCubes()
     
     
     glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
+   glEnable(GL_CULL_FACE);
     
-    //camera.begin();
-   // mc.draw();
-    mc.drawGrid();
-   // camera.end();
+    camera.begin();
+    
+    //draw the mesh
+    
+    ofPushMatrix();
+    ofPushView();
+    
+    ofScale(250, 250, 250);
+    
+   ofMatrix4x4 matP = ofGetCurrentMatrix(OF_MATRIX_PROJECTION);
+    ofMatrix4x4 matMV = ofGetCurrentMatrix(OF_MATRIX_MODELVIEW);
+    
+    ofMatrix4x4 normalMatrix = ofMatrix4x4::getTransposedOf(matMV.getInverse());
+    
+    normalShader.begin();
+    normalShader.setUniformMatrix4f("mv", matP);
+    normalShader.setUniformMatrix4f("mp", matMV);
+    normalShader.setUniformMatrix4f("normalMatrix", normalMatrix);
+    
+
+    mc.draw();
+  //  mc.drawGrid();
+    ofPopMatrix();
+    ofPopView();
+    
+     normalShader.end();
+    
+    camera.end();
     
     
     glDisable(GL_DEPTH_TEST);
@@ -131,7 +155,7 @@ void ofApp::draw(){
     if(qcar->hasFoundMarker()) {
 
         ofDisableDepthTest();
-        ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+        //ofEnableBlendMode(OF_BLENDMODE_ALPHA);
         ofSetLineWidth(3);
         
         bool bInside = false;
@@ -157,24 +181,26 @@ void ofApp::draw(){
         ofSetLineWidth(1);
         
         ofEnableDepthTest();
-       ofEnableNormalizedTexCoords();
+        ofEnableNormalizedTexCoords();
         
-        qcar->begin();
+        /*qcar->begin();
         teapotImage.getTextureReference().bind();
         ofSetColor(255, 230);
         ofScale(3, 3, 3);
         
         ofDrawTeapot();
-       // drawMarchingCubes();
+       
         
         ofSetColor(255);
         teapotImage.getTextureReference().unbind();
         qcar->end();
+         */
         
-       ofDisableNormalizedTexCoords();
+        ofDisableNormalizedTexCoords();
     
-        
-        
+        qcar->begin();
+        drawMarchingCubes();
+        qcar->end();
         
         qcar->begin();
         ofNoFill();
@@ -183,6 +209,7 @@ void ofApp::draw(){
         float radius = 20;
         ofPushMatrix();
         ofTranslate(markerPoint.x, markerPoint.y);
+        //drawMarchingCubes();
         ofCircle(0, 0, radius);
         ofLine(-radius, 0, radius, 0);
         ofLine(0, -radius, 0, radius);
@@ -235,6 +262,10 @@ void ofApp::draw(){
         
     }
     
+ //   ofPushMatrix();
+  //  ofTranslate(markerPoint.x, markerPoint.y);
+  //  drawMarchingCubes();
+  //  ofPopMatrix();
     
 
 }

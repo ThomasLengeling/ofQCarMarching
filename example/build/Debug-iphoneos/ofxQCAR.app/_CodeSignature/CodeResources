@@ -54,11 +54,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2yJ2GPSX4ndp98DOmEIt+C6AuBo=
+		XAC6sMiqVmXv2ZN4jsxNfGaJ9Rk=
 		</data>
 		<key>MyAppViewController.nib</key>
 		<data>
-		LOJvOAbLpwv8QoGEz4Wx58d2G00=
+		fn9mpC+p+/voSIF4ymrRSm2FFU8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>normalShader.frag</key>
 		<data>
-		W/12mY5gqNG97SsMfvIuRBkDHe8=
+		ZPnYwLCeIPFUVoPIhAwd6cNLQ0A=
 		</data>
 		<key>normalShader.vert</key>
 		<data>
-		ly+QHPgBr13P6QpLbsiO01lG92U=
+		Ai6INNsWReec1tfmd8C0p6W+yTo=
 		</data>
 		<key>qcar_assets/Qualcomm.dat</key>
 		<data>
@@ -122,11 +122,11 @@
 		</data>
 		<key>shaders/normalShader.frag</key>
 		<data>
-		W/12mY5gqNG97SsMfvIuRBkDHe8=
+		ZPnYwLCeIPFUVoPIhAwd6cNLQ0A=
 		</data>
 		<key>shaders/normalShader.vert</key>
 		<data>
-		ly+QHPgBr13P6QpLbsiO01lG92U=
+		Ai6INNsWReec1tfmd8C0p6W+yTo=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -181,7 +181,7 @@
 		</data>
 		<key>MyAppViewController.nib</key>
 		<data>
-		LOJvOAbLpwv8QoGEz4Wx58d2G00=
+		fn9mpC+p+/voSIF4ymrRSm2FFU8=
 		</data>
 		<key>Qualcomm.dat</key>
 		<data>
@@ -213,11 +213,11 @@
 		</data>
 		<key>normalShader.frag</key>
 		<data>
-		W/12mY5gqNG97SsMfvIuRBkDHe8=
+		ZPnYwLCeIPFUVoPIhAwd6cNLQ0A=
 		</data>
 		<key>normalShader.vert</key>
 		<data>
-		ly+QHPgBr13P6QpLbsiO01lG92U=
+		Ai6INNsWReec1tfmd8C0p6W+yTo=
 		</data>
 		<key>qcar_assets/Qualcomm.dat</key>
 		<data>
@@ -241,11 +241,11 @@
 		</data>
 		<key>shaders/normalShader.frag</key>
 		<data>
-		W/12mY5gqNG97SsMfvIuRBkDHe8=
+		ZPnYwLCeIPFUVoPIhAwd6cNLQ0A=
 		</data>
 		<key>shaders/normalShader.vert</key>
 		<data>
-		ly+QHPgBr13P6QpLbsiO01lG92U=
+		Ai6INNsWReec1tfmd8C0p6W+yTo=
 		</data>
 	</dict>
 	<key>rules</key>

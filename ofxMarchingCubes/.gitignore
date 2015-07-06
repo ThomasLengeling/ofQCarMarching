@@ -1,0 +1,37 @@
+# project specific
+parisWSocketServer/bin/*
+!parisWSocketServer/bin/data
+
+# XCode build stuff
+*.build
+DerivedData
+
+# apps
+*.app
+
+# osx noise
+.DS_Store
+profile
+
+# sublime stuff
+*.sublime-project
+*.sublime-workspace
+
+# IS stuff
+*.zip
+build/
+
+# xcode noise
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# svn & cvs
+.svn
+CVS

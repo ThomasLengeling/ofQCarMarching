@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/tom/Documents/Programming/openFrameworks/of_v0.8.4_ios_release/addons/ofxQCAR/src/ofxQCAR_Utils.mm \
-  /Users/tom/Documents/Programming/openFrameworks/of_v0.8.4_ios_release/addons/ofxQCAR/src/ofxQCAR_Utils.h \
+  /Users/tom/Documents/Programming/openFrameworks/of_v20150701_ios_release/addons/ofxQCAR/src/ofxQCAR_Utils.mm \
+  /Users/tom/Documents/Programming/openFrameworks/of_v20150701_ios_release/addons/ofxQCAR/src/ofxQCAR_Utils.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Tool.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/System.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Matrices.h \
