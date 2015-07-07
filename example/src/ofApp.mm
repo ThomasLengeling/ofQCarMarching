@@ -1,5 +1,7 @@
 #include "ofApp.h"
 
+static const string kLicenseKey = "AfJ6d4//////AAAAAck2JyVaKEJarsb9283lT4EiMz7jNMKKEPuFlDhX9shBx1A41N05tPNEMHb4IMvsx3DNpjbyXLrUQJdJcwS2IzV4NdmwY7R8CkxZFeVKEotcSjh296otcRMmZPAYWRQAFL7f4ljQLMSVjvDFZRLf9/X5uIR+wNNTqK47d1NpPhDBv2usiT0Z8SxSej5Dn919ue2p8o8QGk/KThAFPVCwIQxigXauDlECHFB0EHvoNNatMVsjyMC3hKU/btXbCFMa2wL5ZM/nQgVeqveMv5eOygzCCLkDIMC2R8QRQzqAvH4h2I0YBJ0CMxD98AP45wEwxLOOLMRFdIOi2THxpVhWHSHiU/b6XSX96FHY/0eM3aul";
+
 void ofApp::setupMarchingCubes()
 {
     
@@ -124,11 +126,12 @@ void ofApp::setup(){
     
     touchPoint.x = touchPoint.y = -1;
 
-    ofxQCAR * qcar = ofxQCAR::getInstance();
-    qcar->addTarget("Qualcomm.xml", "Qualcomm.xml");
-    qcar->autoFocusOn();
-    qcar->setCameraPixelsFlag(true);
-    qcar->setup();
+    ofxQCAR & QCAR = *ofxQCAR::getInstance();
+    QCAR.setLicenseKey(kLicenseKey); // ADD YOUR APPLICATION LICENSE KEY HERE.
+    QCAR.addMarkerDataPath("qcar_assets/Qualcomm.xml");
+    QCAR.autoFocusOn();
+    QCAR.setCameraPixelsFlag(true);
+    QCAR.setup();
     
     setupMarchingCubes();
 }
@@ -168,7 +171,12 @@ void ofApp::draw(){
             bInside = ofInsidePoly(touchPoint, markerPoly);
         }
         
-        ofSetColor(ofColor(255, 0, 255, bInside ? 150 : 50));
+        if(bInside == true) {
+            ofSetColor(ofColor(255, 0, 255, 150));
+        } else {
+            ofSetColor(ofColor(255, 0, 255, 50));
+        }
+        
         qcar->drawMarkerRect();
         
         ofSetColor(ofColor::yellow);

@@ -5,7 +5,7 @@
 //
 
 #import "ofxiOSEAGLView.h"
-#import <qcar/UIGLViewProtocol.h>
+#import <QCAR/UIGLViewProtocol.h>
 
 @interface ofxQCAR_EAGLView : ofxiOSEAGLView <UIGLViewProtocol> {
     //
