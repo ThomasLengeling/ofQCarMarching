@@ -555,4 +555,10 @@ dependencies: \
   /Users/tom/Documents/programming/openFrameworks/of_v0.8.4_ios_release/addons/ofxMarchingCubes/src/mcTables.h \
   /Users/tom/Documents/Programming/openFrameworks/of_v20150701_ios_release/addons/ofxQCAR/src/ofxQCAR.h \
   /Users/tom/Documents/Programming/openFrameworks/of_v20150701_ios_release/addons/ofxQCAR/src/ofxQCAR_App.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/State.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/System.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Frame.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/QCAR.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/DataSet.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/NonCopyable.h \
   /Users/tom/Documents/Programming/openFrameworks/of_v20150701_ios_release/addons/ofxQCAR/example/src/3d/Teapot.h

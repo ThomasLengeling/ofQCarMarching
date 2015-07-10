@@ -16,7 +16,7 @@ void ofApp::setupMarchingCubes()
     
     mc.setSmoothing( false );
     
-    normalShader.load("shaders/normalShader.vert, shaders/normalShader.frag");
+    normalShader.load("shaders/normalShader.vert", "shaders/normalShader.frag");
 }
 
 void ofApp::updateMarchingCubes()
@@ -76,17 +76,23 @@ void ofApp::drawMarchingCubes()
     glEnable(GL_DEPTH_TEST);
    glEnable(GL_CULL_FACE);
     
-    camera.begin();
+  //  camera.begin();
     
     //draw the mesh
+  //  ofPushMatrix();
+
+    ofxQCAR & qcar = *ofxQCAR::getInstance();
     
-    ofPushMatrix();
-    ofPushView();
     
-    ofScale(250, 250, 250);
     
-   ofMatrix4x4 matP = ofGetCurrentMatrix(OF_MATRIX_PROJECTION);
-    ofMatrix4x4 matMV = ofGetCurrentMatrix(OF_MATRIX_MODELVIEW);
+    //get matrices for the shader
+    ofMatrix4x4 matP  =  qcar.getProjectionMatrix();
+    ofMatrix4x4 matMV =  qcar.getModelViewMatrix();
+    
+    
+    //matP.scale(10, 10, 10);
+    
+    //scale the model view -> object
     
     ofMatrix4x4 normalMatrix = ofMatrix4x4::getTransposedOf(matMV.getInverse());
     
@@ -95,15 +101,13 @@ void ofApp::drawMarchingCubes()
     normalShader.setUniformMatrix4f("mp", matMV);
     normalShader.setUniformMatrix4f("normalMatrix", normalMatrix);
     
-
     mc.draw();
-  //  mc.drawGrid();
-    ofPopMatrix();
-    ofPopView();
+    //mc.drawGrid(true);
+  //  ofPopMatrix();
     
-     normalShader.end();
+    normalShader.end();
     
-    camera.end();
+  //  camera.end();
     
     
     glDisable(GL_DEPTH_TEST);
@@ -126,12 +130,12 @@ void ofApp::setup(){
     
     touchPoint.x = touchPoint.y = -1;
 
-    ofxQCAR & QCAR = *ofxQCAR::getInstance();
-    QCAR.setLicenseKey(kLicenseKey); // ADD YOUR APPLICATION LICENSE KEY HERE.
-    QCAR.addMarkerDataPath("qcar_assets/Qualcomm.xml");
-    QCAR.autoFocusOn();
-    QCAR.setCameraPixelsFlag(true);
-    QCAR.setup();
+    ofxQCAR & qcar = *ofxQCAR::getInstance();
+    qcar.setLicenseKey(kLicenseKey); // ADD YOUR APPLICATION LICENSE KEY HERE.
+    qcar.addMarkerDataPath("qcar_assets/Qualcomm.xml");
+    qcar.autoFocusOn();
+    qcar.setCameraPixelsFlag(true);
+    qcar.setup();
     
     setupMarchingCubes();
 }
@@ -171,12 +175,7 @@ void ofApp::draw(){
             bInside = ofInsidePoly(touchPoint, markerPoly);
         }
         
-        if(bInside == true) {
-            ofSetColor(ofColor(255, 0, 255, 150));
-        } else {
-            ofSetColor(ofColor(255, 0, 255, 50));
-        }
-        
+        ofSetColor(ofColor(255, 0, 255, bInside ? 150 : 50));
         qcar->drawMarkerRect();
         
         ofSetColor(ofColor::yellow);
@@ -206,10 +205,38 @@ void ofApp::draw(){
         
         ofDisableNormalizedTexCoords();
     
-        qcar->begin();
-        drawMarchingCubes();
-        qcar->end();
+        //draw the marching cube with shdaer using the matrices of the qcar
+        ofMatrix4x4 matP  =  qcar->getProjectionMatrix();
+        ofMatrix4x4 matMV =  qcar->getModelViewMatrix();
         
+        qcar->begin();
+        
+        glEnable(GL_DEPTH_TEST);
+        glEnable(GL_CULL_FACE);
+        
+        //camera.begin();
+        
+        
+        //get matrices for the shader
+        ofMatrix4x4 normalMatrix = ofMatrix4x4::getTransposedOf(matMV.getInverse());
+        
+        normalShader.begin();
+        normalShader.setUniformMatrix4f("mv", matP);
+        normalShader.setUniformMatrix4f("mp", matMV);
+        normalShader.setUniformMatrix4f("normalMatrix", normalMatrix);
+        
+        mc.draw();
+
+        normalShader.end();
+        
+        
+        glDisable(GL_DEPTH_TEST);
+        glDisable(GL_CULL_FACE);
+        qcar->end();
+       // ofPopMatrix();
+        
+        
+     /*
         qcar->begin();
         ofNoFill();
         ofSetColor(255, 0, 0, 200);
@@ -226,6 +253,7 @@ void ofApp::draw(){
         ofSetColor(255);
         ofSetLineWidth(1);
         qcar->end();
+      */
     }
     
     ofDisableDepthTest();
@@ -270,7 +298,7 @@ void ofApp::draw(){
         
     }
     
- //   ofPushMatrix();
+  //  ofPushMatrix();
   //  ofTranslate(markerPoint.x, markerPoint.y);
   //  drawMarchingCubes();
   //  ofPopMatrix();

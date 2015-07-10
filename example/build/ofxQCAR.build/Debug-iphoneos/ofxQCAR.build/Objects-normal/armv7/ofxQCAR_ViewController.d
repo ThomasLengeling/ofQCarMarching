@@ -6,7 +6,7 @@ dependencies: \
   ../../../addons/ofxiOS/src/core/ofxiOSEAGLView.h \
   ../../../addons/ofxiOS/src/gl/EAGLView.h \
   ../../../addons/ofxiOS/src/gl/ESRenderer.h \
-  ../../../addons/ofxQCAR/libs/qcar/include/qcar/UIGLViewProtocol.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/UIGLViewProtocol.h \
   /Users/tom/Documents/Programming/openFrameworks/of_v20150701_ios_release/addons/ofxQCAR/src/ofxQCAR.h \
   ../../../libs/openFrameworks/ofMain.h \
   ../../../libs/openFrameworks/utils/ofConstants.h \
@@ -553,4 +553,10 @@ dependencies: \
   ../../../addons/ofxiOS/src/utils/ofxiOSCoreLocation.h \
   ../../../addons/ofxiOS/src/utils/ofxiOSImagePicker.h \
   ../../../addons/ofxiOS/src/utils/ofxiOSMapKit.h \
-  ../../../addons/ofxiOS/src/utils/ofxiOSMapKitListener.h
+  ../../../addons/ofxiOS/src/utils/ofxiOSMapKitListener.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/State.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/System.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Frame.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/QCAR.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/DataSet.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/NonCopyable.h

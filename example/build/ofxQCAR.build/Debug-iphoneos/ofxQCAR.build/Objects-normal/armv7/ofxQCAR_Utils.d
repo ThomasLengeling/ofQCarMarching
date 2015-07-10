@@ -7,15 +7,16 @@ dependencies: \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Vectors.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/DataSet.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/NonCopyable.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/QCAR.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/ImageTarget.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Trackable.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Type.h \
+  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/ObjectTarget.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/CameraDevice.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/VideoMode.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/CameraCalibration.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/TrackableResult.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/VideoBackgroundConfig.h \
-  ../../../addons/ofxQCAR/libs/qcar/include/QCAR/QCAR.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/QCAR_iOS.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/Renderer.h \
   ../../../addons/ofxQCAR/libs/qcar/include/QCAR/State.h \

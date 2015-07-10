@@ -39,11 +39,11 @@
     }
     
     ofxQCAR_ViewController * viewController;
-    //if(UIInterfaceOrientationIsPortrait(orientation)) {
+    if((orientation) == UIInterfaceOrientationPortrait || (orientation) == UIInterfaceOrientationPortraitUpsideDown) {
         viewController = [[[ofxQCAR_ViewController alloc] initWithAppInPortraitMode:new ofApp()] autorelease];
-   // } else if(UIInterfaceOrientationIsLandscape(orientation)) {
-    //    viewController = [[[ofxQCAR_ViewController alloc] initWithAppInLandscapeMode:new ofApp()] autorelease];
-   // }
+    } else if((orientation) == UIInterfaceOrientationLandscapeLeft || (orientation) == UIInterfaceOrientationLandscapeRight) {
+        viewController = [[[ofxQCAR_ViewController alloc] initWithAppInLandscapeMode:new ofApp()] autorelease];
+    }
 
     [self.navigationController pushViewController:viewController animated:YES];
     self.navigationController.navigationBar.topItem.title = @"Qualcomm AR";

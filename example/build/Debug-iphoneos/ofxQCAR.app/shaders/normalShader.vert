@@ -24,9 +24,16 @@ void main()
 	//norm = normalize(m3 * normal);
 
 	 norm =  (normalMatrix * vec4(normal.xyz,0.0)).xyz;
+    
+     //Scale the positions
+     vec4 scalePos = position;
+
+     scalePos.x *= 100.0;
+     scalePos.y *= 100.0;
+     scalePos.z *= 100.0;
 
 	 vec4 vertPos  =   mv * vec4(position.xyz, 1.0);
      pos = vec3(vertPos.xyz) / vertPos.w;
 
-	 gl_Position = mv * mp * position;
+	 gl_Position = mv * mp * scalePos;
 }
